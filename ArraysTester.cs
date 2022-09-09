@@ -2,7 +2,7 @@ namespace prove_01;
 
 public static class ArraysTester {
     /// <summary>
-    /// Entry point for the Prove 9 tests
+    /// Entry point for the Prove 1 tests
     /// </summary>
     public static void Run() {
         // Sample Test Cases (may not be comprehensive)
@@ -36,7 +36,13 @@ public static class ArraysTester {
         // TODO Problem 1 Start
         return new double[0];
     }
-
+    
+    /// <summary>
+    /// Rotate the 'data' to the right by the 'amount'.  For example, if the data is 
+    /// &lt;List&gt;{1, 2, 3, 4, 5, 6, 7, 8, 9} and an amount is 5 then the list returned should be 
+    /// &lt;List&gt;{5, 6, 7, 8, 9, 1, 2, 3, 4}.  The value of amount will be in the range of 1 and 
+    /// <code>data.Count</code>.
+    /// </summary>
     private static void RotateListRight(List<int> data, int amount)
     {
         // TODO Problem 2 Start
