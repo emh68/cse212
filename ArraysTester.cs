@@ -22,6 +22,9 @@ public static class ArraysTester {
         RotateListRight(numbers, 5);
         Console.WriteLine($"<List>{{{string.Join(',', numbers)}}}"); // <List>{5, 6, 7, 8, 9, 1, 2, 3, 4}
         numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        RotateListRight(numbers, 3);
+        Console.WriteLine($"<List>{{{string.Join(',', numbers)}}}"); // <List>{7, 8, 9, 1, 2, 3, 4, 5, 6}
+        numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
         RotateListRight(numbers, 9);
         Console.WriteLine($"<List>{{{string.Join(',', numbers)}}}"); // <List>{1, 2, 3, 4, 5, 6, 7, 8, 9}
     }
