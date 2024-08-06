@@ -1,10 +1,15 @@
+using System.Security.Cryptography.X509Certificates;
+using System.Xml.XPath;
+
 namespace prove_01;
 
-public static class ArraysTester {
+public static class ArraysTester
+{
     /// <summary>
     /// Entry point for the Prove 1 tests
     /// </summary>
-    public static void Run() {
+    public static void Run()
+    {
         // Sample Test Cases (may not be comprehensive)
         Console.WriteLine("\n=========== PROBLEM 1 TESTS ===========");
         double[] multiples = MultiplesOf(7, 5);
@@ -36,10 +41,17 @@ public static class ArraysTester {
     /// <returns>array of doubles that are the multiples of the supplied number</returns>
     private static double[] MultiplesOf(double number, int length)
     {
-        // TODO Problem 1 Start (don't forget to fill out the 01-prove-response.docx)
-        return new double[0]; // replace this return statement with your own
+        // Create a new array to hold the multiples
+        double[] result = new double[length];
+        // Iterate through the array
+        for (int i = 0; i < length; i++)
+        {
+            // Calculate the multiples
+            result[i] = number * (i + 1);
+        }
+        return result;
     }
-    
+
     /// <summary>
     /// Rotate the 'data' to the right by the 'amount'.  For example, if the data is 
     /// <c>&lt;List&gt;{1, 2, 3, 4, 5, 6, 7, 8, 9}</c> and an amount is 3 then the list returned should be 
@@ -51,5 +63,18 @@ public static class ArraysTester {
     private static void RotateListRight(List<int> data, int amount)
     {
         // TODO Problem 2 Start (don't forget to fill out the 01-prove-response.docx)
+        // Calculate the effective amount and handle instances where amount > count
+        int count = data.Count;
+        amount = amount % count;
+
+        if (amount > 0)
+        {
+            // Get the elements to rotate
+            List<int> result = data.GetRange(count - amount, amount);
+            // Remove the elements to rotate
+            data.RemoveRange(count - amount, amount);
+            // Insert the elements that were rotated at the beginning of the list
+            data.InsertRange(0, result);
+        }
     }
 }
