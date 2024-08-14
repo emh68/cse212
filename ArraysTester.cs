@@ -1,6 +1,3 @@
-using System.Security.Cryptography.X509Certificates;
-using System.Xml.XPath;
-
 namespace prove_01;
 
 public static class ArraysTester
