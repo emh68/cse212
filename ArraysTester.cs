@@ -43,7 +43,10 @@ public static class ArraysTester
         // Iterate through the array
         for (int i = 0; i < length; i++)
         {
-            // Calculate the multiples
+            // Calculate the multiples. We multiply the number given as an input by the index of the number + 1, 
+            // so the result at index 0 is the number input * index + 1. 
+            // For example result[0] = 7 * (0 + 1), which gives us a result of 7 at index 0.
+            // result[1] = 7 * (1 + 1), etc.
             result[i] = number * (i + 1);
         }
         return result;
@@ -60,8 +63,10 @@ public static class ArraysTester
     private static void RotateListRight(List<int> data, int amount)
     {
         // TODO Problem 2 Start (don't forget to fill out the 01-prove-response.docx)
-        // Calculate the effective amount and handle instances where amount > count
         int count = data.Count;
+        // Calculate the effective amount and handle instances where amount > count. 
+        // Ensures efficiency, so that the list doesn't rotate more than the length of the list. 
+        // For example, rotating 100 positions with 9 elements in the list is essentially the same as rotating 1 position.
         amount = amount % count;
 
         if (amount > 0)
@@ -70,7 +75,7 @@ public static class ArraysTester
             List<int> result = data.GetRange(count - amount, amount);
             // Remove the elements to rotate
             data.RemoveRange(count - amount, amount);
-            // Insert the elements that were rotated at the beginning of the list
+            // Insert the elements that were removed at the beginning of the list
             data.InsertRange(0, result);
         }
     }
