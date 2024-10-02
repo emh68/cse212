@@ -31,5 +31,5 @@ Examine the `01-prove_response.docx` document to provide your answers to questio
 
 ## Submission
 You need to submit the following for this assignment:
-* Make sure all of your changes are committed and pushed to the `main` branch of your **a24-prove-01-emh68** repository
+* Make sure all of your changes are committed and pushed to the `main` branch of your **e212** repository
 * Submit a link to your repository in I-Learn
