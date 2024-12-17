@@ -1,0 +1,9 @@
+D:\cse212\printApp\PrinterQueueApp\obj\Debug\PrinterQueueApp.csproj.AssemblyReference.cache
+D:\cse212\printApp\PrinterQueueApp\obj\Debug\PrinterQueueApp.Properties.Resources.resources
+D:\cse212\printApp\PrinterQueueApp\obj\Debug\PrinterQueueApp.csproj.GenerateResource.cache
+D:\cse212\printApp\PrinterQueueApp\obj\Debug\PrinterQueueApp.csproj.CoreCompileInputs.cache
+D:\cse212\printApp\PrinterQueueApp\bin\Debug\PrinterQueueApp.exe.config
+D:\cse212\printApp\PrinterQueueApp\bin\Debug\PrinterQueueApp.exe
+D:\cse212\printApp\PrinterQueueApp\bin\Debug\PrinterQueueApp.pdb
+D:\cse212\printApp\PrinterQueueApp\obj\Debug\PrinterQueueApp.exe
+D:\cse212\printApp\PrinterQueueApp\obj\Debug\PrinterQueueApp.pdb

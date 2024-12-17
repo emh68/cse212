@@ -1,0 +1,71 @@
+﻿namespace teach_05;
+
+/*
+ * CSE212 
+ * (c) BYU-Idaho
+ * 05-Teach - Problem 2
+ * 
+ * It is a violation of BYU-Idaho Honor Code to post or share this code with others or 
+ * to post it online.  Storage into a personal and private repository (e.g. private
+ * GitHub repository, unshared Google Drive folder) is acceptable.
+ *
+ */
+public static class DisplaySums
+{
+    public static void Run()
+    {
+        DisplaySumPairs(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 });
+        // Should show something like (order does not matter):
+        // 6 4
+        // 7 3
+        // 8 2
+        // 9 1 
+
+        Console.WriteLine("------------");
+        DisplaySumPairs(new[] { -20, -15, -10, -5, 0, 5, 10, 15, 20 });
+        // Should show something like (order does not matter):
+        // 10 0
+        // 15 -5
+        // 20 -10
+
+        Console.WriteLine("------------");
+        DisplaySumPairs(new[] { 5, 11, 2, -4, 6, 8, -1 });
+        // Should show something like (order does not matter):
+        // 8 2
+        // -1 11
+    }
+
+    /// <summary>
+    /// Display pairs of numbers (no duplicates should be displayed) that sum to
+    /// 10 using a set in O(n) time.  We are assuming that there are no duplicates
+    /// in the list.
+    /// </summary>
+    /// <param name="numbers">array of integers</param>
+    private static void DisplaySumPairs(int[] numbers)
+    {
+        // TODO Problem 2 - This should print pairs of numbers in the given array
+        // The targer sum is fixed at 10.
+        int target = 10;
+        // Create a HashSet to store the elements
+        HashSet<int> set = new HashSet<int>();
+
+        // Iterate through each element in the array
+        for (int i = 0; i < numbers.Length; i++)
+        {
+
+            // Calculate the complement that added to
+            // numbers[i], equals the target
+            int complement = target - numbers[i];
+
+            // Check if the complement exists in the set
+            if (set.Contains(complement))
+            {
+                // If found, print the pair
+                Console.WriteLine($"{numbers[i]} {complement}");
+            }
+
+            // Add the current element to the set
+            set.Add(numbers[i]);
+        }
+    }
+}
